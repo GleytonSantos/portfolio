@@ -7,11 +7,8 @@ body {
 }
 
 .hero-text {
-  background: linear-gradient(to right, #021c72, #ffffff, #180c8b);
+  color: #fff;
   background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 1px 1px 2.5px rgba(0, 0, 0, 0.4);
 }
 
 .project-card:hover {

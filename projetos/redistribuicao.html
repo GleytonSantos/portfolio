@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes do Projeto - Redistribuição de Negócios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="..//style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-900 text-gray-100 font-sans">
+    <!-- Navbar -->
+    <header
+      id="navbar"
+      class="bg-gray-800 text-white sticky top-0 z-50 transition duration-300"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 py-2 flex justify-between items-center"
+      >
+        <a href="../index.html"
+          ><h1 class="text-2xl font-bold text-gradient">Gleyton Santos</h1></a
+        >
+
+        <div class="lg:hidden flex items-center">
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <nav
+          id="nav-itens"
+          class="hidden lg:flex space-x-6 text-sm text-gray-200"
+        >
+          <a href="index.html" class="hover:text-gradient transition-colors"
+            >Início</a
+          >
+          <a href="detalhes.html" class="hover:text-gradient transition-colors"
+            >Detalhes do Projeto</a
+          >
+        </nav>
+      </div>
+      <div id="mobile-menu" class="lg:hidden hidden bg-gray-800 text-white">
+        <a href="index.html" class="block py-2 px-4 hover:bg-gray-700"
+          >Início</a
+        >
+        <a href="detalhes.html" class="block py-2 px-4 hover:bg-gray-700"
+          >Detalhes do Projeto</a
+        >
+      </div>
+    </header>
+
+    <!-- Seção Hero -->
+    <section
+      class="hero-section text-center py-10 bg-gradient-to-r from-purple-600 to-cyan-400"
+    >
+      <h1 class="hero-text text-4xl font-semibold bg-clip-text animate-in">
+        Detalhes do Projeto: Sistema de Redistribuição de Negócios
+      </h1>
+    </section>
+
+    <!-- Descrição do Projeto -->
+    <section class="project-details py-10 px-6 md:px-12">
+      <div class="container mx-auto">
+        <div
+          class="project-card bg-white shadow-lg p-6 rounded-lg transform transition-all hover:scale-105 animate-in"
+        >
+          <h2 class="text-3xl font-semibold mb-4 text-gray-800">
+            Sobre o Projeto
+          </h2>
+          <p class="text-lg text-gray-700">
+            O Sistema de Redistribuição de Escolas automatiza a redistribuição
+            de negócios entre SDRs (Representantes de Desenvolvimento de Vendas)
+            com base em regras e limites. Ele integra o HubSpot CRM, armazena
+            dados no Google BigQuery, envia notificações automáticas via Google
+            Chat e trata negociações excluídas.
+          </p>
+        </div>
+
+        <div
+          class="project-card bg-white shadow-lg p-6 rounded-lg mt-6 transform transition-all hover:scale-105 animate-in"
+        >
+          <h2 class="text-3xl font-semibold mb-4 text-gray-800">
+            Tecnologias Usadas
+          </h2>
+          <ul class="list-disc pl-5 text-lg text-gray-700">
+            <li>Python</li>
+            <li>Google Cloud BigQuery</li>
+            <li>HubSpot API</li>
+            <li>Google Cloud Functions</li>
+          </ul>
+        </div>
+
+        <div
+          class="project-card bg-white shadow-lg p-6 rounded-lg mt-6 transform transition-all hover:scale-105 animate-in"
+        >
+          <h2 class="text-3xl font-semibold mb-4 text-gray-800">
+            Principais Funcionalidades
+          </h2>
+          <ul class="list-disc pl-5 text-lg text-gray-700">
+            <li>Integração com o HubSpot CRM</li>
+            <li>Armazenamento de dados no BigQuery</li>
+            <li>Notificações automatizadas via Google Chat</li>
+            <li>Processamento de negociações e geração de relatórios</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-10">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2025 Gleyton Santos - Todos os direitos reservados</p>
+      </div>
+    </footer>
+  </body>
+</html>
