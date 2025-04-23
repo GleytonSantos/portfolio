@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cards.forEach((card, i) => {
         setTimeout(() => {
           card.classList.add("animate-in");
-        }, i * 300); // efeito escada nos cards
+        }, i * 300);
       });
     } else {
       title.classList.remove("animate-in");
@@ -22,9 +22,23 @@ document.addEventListener("DOMContentLoaded", () => {
       animateSection(entry.isIntersecting);
     },
     {
-      threshold: 0.3,
+      threshold: 0.1,
     }
   );
 
   observer.observe(document.querySelector("#projects"));
+});
+
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+const menuLinks = document.querySelectorAll("#mobile-menu a");
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
 });

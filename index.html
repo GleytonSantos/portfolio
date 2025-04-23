@@ -27,26 +27,60 @@
   <body class="bg-gray-900 text-gray-100">
     <header
       id="navbar"
-      class="bg-transparent text-white shadow top-0 z-50 transition duration-300"
+      class="bg-gray-800 text-white sticky top-0 z-50 transition duration-300"
     >
       <div
-        class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center"
+        class="max-w-6xl mx-auto px-4 py-2 flex justify-between items-center"
       >
         <h1 class="text-2xl font-bold text-gradient">Gleyton Santos</h1>
-        <nav id="nav-itens" class="space-x-6 text-sm text-gray-200">
+        <!-- Menu Hamburguer: visível apenas em telas pequenas -->
+        <div class="lg:hidden flex items-center">
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <!-- Menu de navegação: visível apenas em telas grandes -->
+        <nav
+          id="nav-itens"
+          class="hidden lg:flex space-x-6 text-sm text-gray-200"
+        >
           <a href="#skills" class="hover:text-gradient">Skills</a>
           <a href="#projects" class="hover:text-gradient">Projetos</a>
           <a href="#contato" class="hover:text-gradient">Contato</a>
         </nav>
+      </div>
+
+      <!-- Menu Mobile: visível apenas em telas pequenas -->
+      <div id="mobile-menu" class="lg:hidden hidden bg-gray-800 text-white">
+        <a href="#skills" class="block py-2 px-4 hover:bg-gray-700">Skills</a>
+        <a href="#projects" class="block py-2 px-4 hover:bg-gray-700"
+          >Projetos</a
+        >
+        <a href="#contato" class="block py-2 px-4 hover:bg-gray-700">Contato</a>
       </div>
     </header>
 
     <section class="gradient-bg text-white py-20 text-center">
       <div class="max-w-4xl mx-auto px-4">
         <img
+          src="img/profile.jpeg"
           src="https://placehold.co/120x120?text=Avatar"
           alt="Foto de Gleyton"
           class="mx-auto rounded-full mb-6 border-4 border-white"
+          style="max-width: 250px; max-height: 200px"
         />
         <h2 class="text-4xl font-extrabold hero-text mb-4">
           Especialista em Dados & Automação
@@ -354,21 +388,21 @@
         <h3 class="text-2xl font-semibold text-white mb-6">Fale comigo</h3>
         <p class="text-gray-200">
           Email:
-          <a href="mailto:gleyton.email@email.com" class="text-white"
-            >gleyton.email@email.com</a
+          <a href="mailto:gleyton10cte@gmail.com" class="text-white"
+            >gleyton10cte@gmail.com</a
           >
         </p>
         <p class="text-gray-200">
           GitHub:
-          <a href="https://github.com/gleyton" class="text-white"
-            >github.com/gleyton</a
+          <a href="https://github.com/GleytonSantos" class="text-white"
+            >github.com/GleytonSantos</a
           >
         </p>
         <p class="text-gray-200">
           LinkedIn:
-          <a href="https://linkedin.com/in/gleyton" class="text-white"
-            >linkedin.com/in/gleyton</a
-          >
+          <a href="www.linkedin.com/in/gleyton-santos" class="text-white"
+            >linkedin.com/in/gleyton-santos
+          </a>
         </p>
       </div>
     </section>
