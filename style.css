@@ -1,0 +1,109 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #6a1b9a, #00bcd4, #8e24aa);
+}
+
+.hero-text {
+  background: linear-gradient(to right, #021c72, #ffffff, #180c8b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2.5px rgba(0, 0, 0, 0.4);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease;
+}
+
+nav a {
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #9b4de6;
+}
+
+/* Habilidade do ícone */
+
+.skill-icon {
+  position: relative;
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+.skill-icon svg.icon-svg {
+  color: #fff; /* Ou usa `inherit` se quiser herdar do pai */
+}
+.skill-icon svg.icon-svg:hover {
+  color: #9b4de6;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.skill-icon:hover {
+  transform: scale(1.15);
+}
+.skill-icon:hover {
+  color: #9b4de6;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skill-icon::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #9b4de6;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 20;
+}
+
+.skill-icon:hover::after {
+  opacity: 1;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.floating {
+  animation: float 5s ease-in-out infinite;
+}
+.project-card,
+.section-title {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+/* Título vem de cima */
+.section-title.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cards vêm da esquerda */
+.project-card.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.project-card {
+  transform: translateX(-50px);
+}
