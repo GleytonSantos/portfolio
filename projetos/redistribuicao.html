@@ -58,77 +58,191 @@
           id="nav-itens"
           class="hidden lg:flex space-x-6 text-sm text-gray-200"
         >
-          <a href="index.html" class="hover:text-gradient transition-colors"
+          <a href="../index.html" class="hover:text-gradient transition-colors"
             >Início</a
           >
-          <a href="detalhes.html" class="hover:text-gradient transition-colors"
+          <a href="#details" class="hover:text-gradient transition-colors"
             >Detalhes do Projeto</a
           >
         </nav>
       </div>
       <div id="mobile-menu" class="lg:hidden hidden bg-gray-800 text-white">
-        <a href="index.html" class="block py-2 px-4 hover:bg-gray-700"
+        <a href="../index.html" class="block py-2 px-4 hover:bg-gray-700"
           >Início</a
         >
-        <a href="detalhes.html" class="block py-2 px-4 hover:bg-gray-700"
+        <a href="#details" class="block py-2 px-4 hover:bg-gray-700"
           >Detalhes do Projeto</a
         >
       </div>
     </header>
 
     <!-- Seção Hero -->
+    <!-- HERO MELHORADA -->
     <section
-      class="hero-section text-center py-10 bg-gradient-to-r from-purple-600 to-cyan-400"
+      class="hero-section text-center py-14 md:py-20 px-4 bg-gradient-to-r from-purple-600 to-cyan-400"
     >
-      <h1 class="hero-text text-4xl font-semibold bg-clip-text animate-in">
-        Detalhes do Projeto: Sistema de Redistribuição de Negócios
-      </h1>
+      <div class="max-w-4xl mx-auto">
+        <h1
+          class="hero-text text-3xl md:text-5xl font-extrabold text-white animate-in drop-shadow-lg"
+        >
+          Detalhes do Projeto:
+          <span class="underline decoration-white/50"
+            >Sistema de Redistribuição de Negócios</span
+          >
+        </h1>
+        <p class="mt-4 text-lg text-white/90 md:text-xl">
+          Uma solução eficiente e automatizada para redistribuição inteligente
+          de leads no HubSpot.
+        </p>
+      </div>
     </section>
 
-    <!-- Descrição do Projeto -->
+    <!-- MODELO REUTILIZÁVEL DE DETALHES DO PROJETO -->
     <section class="project-details py-10 px-6 md:px-12">
       <div class="container mx-auto">
+        <!-- SOBRE O PROJETO -->
         <div
-          class="project-card bg-white shadow-lg p-6 rounded-lg transform transition-all hover:scale-105 animate-in"
+          class="project-card bg-white/10 rounded-2xl p-6 shadow-xl hover:scale-[1.02] transition-all animate-in"
         >
-          <h2 class="text-3xl font-semibold mb-4 text-gray-800">
-            Sobre o Projeto
-          </h2>
-          <p class="text-lg text-gray-700">
+          <div class="floating flex items-center gap-4 mb-4">
+            <i class="fa-solid fa-diagram-project text-indigo-400 text-3xl"></i>
+            <h2 class="text-2xl font-bold text-white">Sobre o Projeto</h2>
+          </div>
+          <p class="text-md text-gray-300">
             O Sistema de Redistribuição de Escolas automatiza a redistribuição
-            de negócios entre SDRs (Representantes de Desenvolvimento de Vendas)
-            com base em regras e limites. Ele integra o HubSpot CRM, armazena
-            dados no Google BigQuery, envia notificações automáticas via Google
-            Chat e trata negociações excluídas.
+            de negócios entre SDRs com base em regras e limites. Ele integra o
+            HubSpot CRM, armazena dados no Google BigQuery, envia notificações
+            automáticas via Google Chat e trata negociações excluídas.
           </p>
         </div>
 
+        <!-- TECNOLOGIAS USADAS -->
         <div
-          class="project-card bg-white shadow-lg p-6 rounded-lg mt-6 transform transition-all hover:scale-105 animate-in"
+          class="project-card bg-white/10 rounded-2xl p-6 shadow-xl hover:scale-[1.02] mt-6 transition-all animate-in"
         >
-          <h2 class="text-3xl font-semibold mb-4 text-gray-800">
-            Tecnologias Usadas
-          </h2>
-          <ul class="list-disc pl-5 text-lg text-gray-700">
-            <li>Python</li>
-            <li>Google Cloud BigQuery</li>
-            <li>HubSpot API</li>
-            <li>Google Cloud Functions</li>
+          <div class="floating flex items-center gap-4 mb-4">
+            <i class="fa-solid fa-code text-cyan-300 text-3xl"></i>
+            <h2 class="text-2xl font-bold text-white">Tecnologias Usadas</h2>
+          </div>
+          <ul class="list-disc pl-5 text-md text-gray-300 space-y-1">
+            <li>Python <i class="fab fa-python text-yellow-300 ml-2"></i></li>
+            <li>
+              Google Cloud BigQuery
+              <i class="fa-solid fa-database text-pink-400 ml-2"></i>
+            </li>
+            <li>
+              HubSpot API
+              <i class="fa-brands fa-hubspot text-orange-500 ml-2"></i>
+            </li>
+            <li>
+              Google Cloud Functions
+              <i class="fa-brands fa-google text-green-300 ml-2"></i>
+            </li>
           </ul>
         </div>
 
+        <!-- FUNCIONALIDADES -->
         <div
-          class="project-card bg-white shadow-lg p-6 rounded-lg mt-6 transform transition-all hover:scale-105 animate-in"
+          class="project-card bg-white/10 rounded-2xl p-6 shadow-xl hover:scale-[1.02] mt-6 transition-all animate-in"
         >
-          <h2 class="text-3xl font-semibold mb-4 text-gray-800">
-            Principais Funcionalidades
-          </h2>
-          <ul class="list-disc pl-5 text-lg text-gray-700">
+          <div class="floating flex items-center gap-4 mb-4">
+            <i class="fa-solid fa-wrench text-amber-400 text-3xl"></i>
+            <h2 class="text-2xl font-bold text-white">
+              Principais Funcionalidades
+            </h2>
+          </div>
+          <ul class="list-disc pl-5 text-md text-gray-300 space-y-1">
             <li>Integração com o HubSpot CRM</li>
             <li>Armazenamento de dados no BigQuery</li>
             <li>Notificações automatizadas via Google Chat</li>
             <li>Processamento de negociações e geração de relatórios</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="details" class="details py-10 px-6 md:px-12">
+      <hr class="my-12 border-t border-white/20" />
+      <div class="text-center mb-6">
+        <h2 class="text-3xl font-bold text-white">Detalhes Técnicos</h2>
+        <p class="text-gray-400 mt-2 text-sm">
+          Estrutura, lógica e bastidores do projeto
+        </p>
+      </div>
+
+      <div class="grid gap-4 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2">
+        <!-- EXEMPLO DE CÓDIGO -->
+        <div
+          class="bg-white/10 rounded-2xl p-4 shadow-lg hover:scale-[1.02] transition-all"
+        >
+          <h3 class="text-xl font-semibold text-white mb-2">
+            Estrutura do Projeto
+          </h3>
+          <pre
+            class="text-sm text-indigo-200 bg-black/40 p-3 rounded-lg overflow-x-auto"
+          >
+        📁 redistribuidor-escolas/
+        ├── main.py
+        ├── scheduler.py
+        ├── requirements.txt
+        ├── utils/
+        │   ├── hubspot_client.py
+        │   └── redistributor.py
+        ├── bigquery/
+        │   └── queries.sql
+        └── config/
+            └── settings.py
+          </pre>
+        </div>
+        <div
+          class="bg-white/10 rounded-2xl p-4 shadow-lg hover:scale-[1.02] transition-all"
+        >
+          <h3 class="text-xl font-semibold text-white mb-2">
+            Arquitetura do Fluxo
+          </h3>
+          <div class="relative group">
+            <img
+              src="../img/diagram redistribution.png"
+              alt="Diagrama do fluxo do sistema"
+              class="rounded-lg transition-transform duration-300 group-hover:scale-110 cursor-pointer"
+              onclick="toggleImageSize()"
+            />
+          </div>
+        </div>
+
+        <div
+          class="bg-white/10 rounded-2xl p-4 shadow-lg hover:scale-[1.02] transition-all"
+        >
+          <h3 class="text-xl font-semibold text-white mb-2">
+            Integrações e API
+          </h3>
+          <p class="text-gray-300 text-sm">
+            A integração com o HubSpot utiliza a biblioteca oficial
+            `hubspot-api-client` com autenticação via chave privada. A
+            comunicação com o BigQuery é feita via `google-cloud-bigquery`.
+          </p>
+        </div>
+        <!-- LINK PARA O REPOSITÓRIO -->
+        <div
+          class="bg-white/10 rounded-2xl p-4 shadow-lg hover:scale-[1.02] transition-all"
+        >
+          <h3
+            class="text-xl font-semibold text-white mb-2 flex items-center gap-2"
+          >
+            <i class="fab fa-github text-white text-2xl"></i>
+            Repositório no GitHub
+          </h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Acesse o código-fonte completo do projeto, documentação, instruções
+            de deploy e exemplos de uso.
+          </p>
+          <a
+            href="https://github.com/seu-usuario/seu-repositorio"
+            target="_blank"
+            class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg transition"
+          >
+            Ver no GitHub
+          </a>
         </div>
       </div>
     </section>
@@ -139,5 +253,7 @@
         <p>&copy; 2025 Gleyton Santos - Todos os direitos reservados</p>
       </div>
     </footer>
+
+    <script src="../script.js"></script>
   </body>
 </html>
