@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes do Projeto - Gerenciamento de Tarefas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-900 text-gray-100 font-sans">
+    <!-- Navbar -->
+    <header
+      class="bg-gray-800 text-white sticky top-0 z-50 transition duration-300"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 py-2 flex justify-between items-center"
+      >
+        <a href="../index.html">
+          <h1 class="text-2xl font-bold text-gradient">Gleyton Santos</h1>
+        </a>
+        <div class="lg:hidden flex items-center">
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+        <nav
+          id="nav-itens"
+          class="hidden lg:flex space-x-6 text-sm text-gray-200"
+        >
+          <a href="../index.html" class="hover:text-gradient transition-colors"
+            >Início</a
+          >
+          <a href="#details" class="hover:text-gradient transition-colors"
+            >Detalhes do Projeto</a
+          >
+        </nav>
+      </div>
+      <div id="mobile-menu" class="lg:hidden hidden bg-gray-800 text-white">
+        <a href="../index.html" class="block py-2 px-4 hover:bg-gray-700"
+          >Início</a
+        >
+        <a href="#details" class="block py-2 px-4 hover:bg-gray-700"
+          >Detalhes do Projeto</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section
+      class="hero-section text-center py-14 md:py-20 px-4 bg-gradient-to-r from-indigo-600 to-pink-400"
+    >
+      <div class="max-w-4xl mx-auto">
+        <h1
+          class="text-3xl md:text-5xl font-extrabold text-white animate-in drop-shadow-lg"
+        >
+          Detalhes do Projeto:
+          <span class="underline decoration-white/50"
+            >Sistema de Tarefas HubSpot</span
+          >
+        </h1>
+        <p class="mt-4 text-lg text-white/90 md:text-xl">
+          Automatize sua rotina de tarefas com integração HubSpot + BigQuery.
+        </p>
+      </div>
+    </section>
+
+    <!-- Conteúdo -->
+    <section class="project-details py-10 px-6 md:px-12">
+      <div class="container mx-auto">
+        <!-- Sobre o Projeto -->
+        <div
+          class="project-card bg-white/10 rounded-2xl p-6 shadow-xl hover:scale-[1.02] transition-all animate-in"
+        >
+          <div class="floating flex items-center gap-4 mb-4">
+            <i class="fa-solid fa-check-circle text-blue-300 text-3xl"></i>
+            <h2 class="text-2xl font-bold text-white">Sobre o Projeto</h2>
+          </div>
+          <p class="text-md text-gray-300">
+            Sistema para gerenciamento automatizado de tarefas no HubSpot. Cria
+            e exclui tarefas diárias com base em regras de negócios, integrando
+            com o BigQuery e notificando via Google Chat.
+          </p>
+        </div>
+
+        <!-- Tecnologias Usadas -->
+        <div
+          class="project-card bg-white/10 rounded-2xl p-6 shadow-xl hover:scale-[1.02] mt-6 transition-all animate-in"
+        >
+          <div class="floating flex items-center gap-4 mb-4">
+            <i class="fa-solid fa-code text-green-300 text-3xl"></i>
+            <h2 class="text-2xl font-bold text-white">Tecnologias Usadas</h2>
+          </div>
+          <ul class="list-disc pl-5 text-md text-gray-300 space-y-1">
+            <li>Python <i class="fab fa-python text-yellow-300 ml-2"></i></li>
+            <li>Google Cloud Functions</li>
+            <li>
+              Google BigQuery
+              <i class="fa-solid fa-database text-pink-400 ml-2"></i>
+            </li>
+            <li>
+              HubSpot API
+              <i class="fa-brands fa-hubspot text-orange-500 ml-2"></i>
+            </li>
+            <li>Google Chat API</li>
+          </ul>
+        </div>
+
+        <!-- Funcionalidades -->
+        <div
+          class="project-card bg-white/10 rounded-2xl p-6 shadow-xl hover:scale-[1.02] mt-6 transition-all animate-in"
+        >
+          <div class="floating flex items-center gap-4 mb-4">
+            <i class="fa-solid fa-gears text-indigo-300 text-3xl"></i>
+            <h2 class="text-2xl font-bold text-white">Funcionalidades</h2>
+          </div>
+          <ul class="list-disc pl-5 text-md text-gray-300 space-y-1">
+            <li>Criação automática de tarefas por regras de negócio</li>
+            <li>Exclusão diária de tarefas antigas</li>
+            <li>Consulta de dados com SQL no BigQuery</li>
+            <li>Distribuição balanceada por fila de SDRs</li>
+            <li>Notificações no Google Chat com status diário</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detalhes Técnicos -->
+    <section id="details" class="details py-10 px-6 md:px-12">
+      <hr class="my-12 border-t border-white/20" />
+      <div class="text-center mb-6">
+        <h2 class="text-3xl font-bold text-white">Detalhes Técnicos</h2>
+        <p class="text-gray-400 mt-2 text-sm">
+          Estrutura e funcionamento interno do sistema de tarefas
+        </p>
+      </div>
+
+      <div class="grid gap-4 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2">
+        <!-- Estrutura -->
+        <div
+          class="bg-white/10 rounded-2xl p-4 shadow-lg hover:scale-[1.02] transition-all"
+        >
+          <h3 class="text-xl font-semibold text-white mb-2">
+            Estrutura do Projeto
+          </h3>
+          <pre
+            class="text-sm text-pink-200 bg-black/40 p-3 rounded-lg overflow-x-auto"
+          >
+📁 tarefas-hubspot/
+├── main.py
+├── config/
+│   └── settings.py
+├── utils/
+│   ├── distribuicao.py
+│   └── hubspot.py
+├── queries/
+│   └── tarefas.sql
+└── handlers/
+    └── gerenciador.py
+          </pre>
+        </div>
+
+        <!-- Diagrama -->
+        <div
+          class="bg-white/10 rounded-2xl p-4 shadow-lg hover:scale-[1.02] transition-all"
+        >
+          <h3 class="text-xl font-semibold text-white mb-2">
+            Fluxo do Sistema
+          </h3>
+          <div class="relative">
+            <img
+              src="../img/tarefas.png"
+              alt="Diagrama do fluxo de tarefas"
+              class="rounded-lg cursor-pointer"
+              onclick="toggleImageSize(this)"
+            />
+          </div>
+        </div>
+
+        <!-- APIs -->
+        <div
+          class="bg-white/10 rounded-2xl p-4 shadow-lg hover:scale-[1.02] transition-all"
+        >
+          <h3 class="text-xl font-semibold text-white mb-2">Integrações</h3>
+          <p class="text-gray-300 text-sm">
+            As tarefas são geradas a partir de dados comerciais via HubSpot,
+            analisadas com consultas SQL no BigQuery, e notificadas por Chat
+            API.
+          </p>
+        </div>
+
+        <!-- GitHub -->
+        <div
+          class="bg-white/10 rounded-2xl p-4 shadow-lg hover:scale-[1.02] transition-all"
+        >
+          <h3
+            class="text-xl font-semibold text-white mb-2 flex items-center gap-2"
+          >
+            <i class="fab fa-github text-white text-2xl"></i>
+            Repositório no GitHub
+          </h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Todo o código-fonte e instruções de deploy estão disponíveis no
+            repositório.
+          </p>
+          <a
+            href="https://github.com/GleytonSantos/demo-tasks-hubspot-integrator"
+            target="_blank"
+            class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg transition"
+          >
+            Ver no GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-10">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2025 Gleyton Santos - Todos os direitos reservados</p>
+      </div>
+    </footer>
+  </body>
+</html>
