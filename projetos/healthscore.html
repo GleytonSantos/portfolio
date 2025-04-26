@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes do Projeto - Sistema de Health Score</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-900 text-gray-100 font-sans">
+    <!-- Navbar -->
+    <header
+      class="bg-gray-800 text-white sticky top-0 z-50 transition duration-300"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 py-2 flex justify-between items-center"
+      >
+        <a href="../index.html">
+          <h1 class="text-2xl font-bold text-gradient">Gleyton Santos</h1>
+        </a>
+        <div class="lg:hidden flex items-center">
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+        <nav
+          id="nav-itens"
+          class="hidden lg:flex space-x-6 text-sm text-gray-200"
+        >
+          <a href="../index.html" class="hover:text-gradient transition-colors"
+            >Início</a
+          >
+          <a href="#details" class="hover:text-gradient transition-colors"
+            >Detalhes do Projeto</a
+          >
+        </nav>
+      </div>
+      <div id="mobile-menu" class="lg:hidden hidden bg-gray-800 text-white">
+        <a href="../index.html" class="block py-2 px-4 hover:bg-gray-700"
+          >Início</a
+        >
+        <a href="#details" class="block py-2 px-4 hover:bg-gray-700"
+          >Detalhes do Projeto</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section
+      class="hero-section text-center py-14 md:py-20 px-4 bg-gradient-to-r from-indigo-600 to-pink-400"
+    >
+      <div class="max-w-4xl mx-auto">
+        <h1
+          class="text-3xl md:text-5xl font-extrabold text-white animate-in drop-shadow-lg"
+        >
+          Detalhes do Projeto:
+          <span class="underline decoration-white/50"
+            >Sistema de Health Score</span
+          >
+        </h1>
+        <p class="mt-4 text-lg text-white/90 md:text-xl">
+          Monitore o engajamento das escolas com indicadores automatizados.
+        </p>
+      </div>
+    </section>
+
+    <!-- Conteúdo -->
+    <section class="project-details py-10 px-6 md:px-12">
+      <div class="container mx-auto">
+        <!-- Sobre o Projeto -->
+        <div
+          class="project-card bg-white/10 rounded-2xl p-6 shadow-xl hover:scale-[1.02] transition-all animate-in"
+        >
+          <div class="floating flex items-center gap-4 mb-4">
+            <i class="fa-solid fa-check-circle text-blue-300 text-3xl"></i>
+            <h2 class="text-xl font-bold">Sobre o Projeto</h2>
+          </div>
+          <p class="text-gray-300">
+            O sistema de Health Score foi criado para avaliar a saúde do
+            relacionamento com clientes/escolas com base em critérios objetivos
+            de engajamento e interação. Ele identifica sinais de risco e fornece
+            insights para ações proativas.
+          </p>
+        </div>
+
+        <!-- Funcionalidades -->
+        <div
+          class="project-card bg-white/10 rounded-2xl p-6 shadow-xl hover:scale-[1.02] transition-all animate-in mt-8"
+        >
+          <div class="floating flex items-center gap-4 mb-4">
+            <i class="fa-solid fa-bolt text-yellow-300 text-3xl"></i>
+            <h2 class="text-xl font-bold">Principais Métricas</h2>
+          </div>
+          <p class="text-gray-300 mb-4">
+            As métricas estão divididas em dois grupos principais:
+          </p>
+          <ul class="list-disc list-inside text-gray-300">
+            <li>
+              <strong>Interação:</strong> contato efetivo, respostas no
+              WhatsApp, tickets no Zendesk, cronograma preenchido e logins no
+              sistema.
+            </li>
+            <li>
+              <strong>Engajamento:</strong> percentual de responsáveis
+              cadastrados, compras realizadas e envio de materiais.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Regras de Negócio -->
+        <div
+          class="project-card bg-white/10 rounded-2xl p-6 shadow-xl hover:scale-[1.02] transition-all animate-in mt-8"
+        >
+          <div class="floating flex items-center gap-4 mb-4">
+            <i class="fa-solid fa-scale-balanced text-purple-300 text-3xl"></i>
+            <h2 class="text-xl font-bold">Regras de Classificação</h2>
+          </div>
+          <p class="text-gray-300 mb-2">
+            Uma escola é classificada como <strong>"Não Sumiu"</strong> se
+            atender a pelo menos um dos critérios de engajamento ou interação.
+            Caso contrário, será considerada como <strong>"Sumiu"</strong>.
+          </p>
+          <p class="text-gray-300">
+            O cálculo considera dias úteis com base no calendário nacional,
+            ignorando finais de semana e feriados.
+          </p>
+        </div>
+
+        <!-- Estrutura Técnica -->
+        <div
+          class="project-card bg-white/10 rounded-2xl p-6 shadow-xl hover:scale-[1.02] transition-all animate-in mt-8"
+        >
+          <div class="floating flex items-center gap-4 mb-4">
+            <i class="fa-solid fa-database text-green-300 text-3xl"></i>
+            <h2 class="text-xl font-bold">Stack e Estrutura</h2>
+          </div>
+          <ul class="list-disc list-inside text-gray-300">
+            <li>
+              <strong>Stack:</strong> SQL (BigQuery), Python, HubSpot CRM,
+              Google Cloud.
+            </li>
+            <li>
+              <strong>Tabelas:</strong> deals, activities, schools, holidays.
+            </li>
+            <li>
+              <strong>CTEs:</strong> lista_feriados, atividades,
+              escolas_aplicacao.
+            </li>
+            <li><strong>Timezone:</strong> UTC-3 (Brasil)</li>
+          </ul>
+        </div>
+
+        <!-- Monitoramento e Manutenção -->
+        <div
+          class="project-card bg-white/10 rounded-2xl p-6 shadow-xl hover:scale-[1.02] transition-all animate-in mt-8"
+        >
+          <div class="floating flex items-center gap-4 mb-4">
+            <i class="fa-solid fa-wrench text-red-300 text-3xl"></i>
+            <h2 class="text-xl font-bold">Manutenção e Monitoramento</h2>
+          </div>
+          <p class="text-gray-300 mb-2">
+            O sistema exige atualização periódica dos feriados e revisão
+            trimestral das regras de classificação. Consultas de diagnóstico
+            ajudam a identificar dados faltantes ou inconsistentes.
+          </p>
+        </div>
+        <div
+          class="project-card bg-white/10 rounded-2xl p-6 shadow-xl hover:scale-[1.02] transition-all animate-in mt-8"
+        >
+          <h3
+            class="text-xl font-semibold text-white mb-2 flex items-center gap-2"
+          >
+            <i class="fab fa-github text-white text-2xl"></i>
+            Repositório no GitHub
+          </h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Acesse o código-fonte de um projeto demo com a estrutura usada para
+            esse projeto.
+          </p>
+          <a
+            href="https://github.com/GleytonSantos/customer-healthscore"
+            target="_blank"
+            class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg transition"
+          >
+            Ver no GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
